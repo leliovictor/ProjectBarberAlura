@@ -1,0 +1,308 @@
+body {
+	font-family: 'Montserrat', sans-serif; /*Todo texto daqui pra baixo terá essa fonte importada do google*/
+} /*Alternativa do Montserrat' é a padrão, sans-serif */
+
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0; /* objetivo aqui é que nada do cabeçalho chegue na margem e por isso fazemos uma margem interna cima e baixo*/
+}
+
+.caixa {
+	position: relative;
+	width: 940px; /*Largura padrão da web pois geralmente temos 1260px de largura e 940 tá numa boa margem */
+	margin: 0 auto; /* pra cima e pra baixo e no segundo pra esquerda e direita; */ 
+
+}
+
+nav {
+	position: absolute; /*quando usamos absoluto, fica absoluto pra pagina e por isso é como se ele saisse da div */
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline; /*texto é do tipo block, trava a largura da pagina naquela linha, com inline tiramos isso e ele fica na mesma linha */
+	margin: 0 0 0 15px; /* topo, direita, baixo e depois esquerda;  dará o espaçamento entre os links */
+}
+
+nav a {
+	text-transform: uppercase; /* transforma o link em maisculo */
+	color: #000000; /* ausência de cor = preto */
+	font-weight: bold; /* para deixar aparência de negrito */
+	font-size: 22px;
+	text-decoration: none; /*tira o sublinhado aparente do link, só sublinha ao encostar o mouse */
+}
+
+nav a:hover { /*"hover" edita o que acontece ao passar o mouse por cima do link*/
+	color: #C78C19; /*amarelo mostarda*/
+	text-decoration: underline;
+}
+
+
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block; /*Deixa o li em bloco, os elementos todos juntos e deixa o lado de fora desse bloco livre ao invés de ocupar a largura toda*/
+	text-align: center; /*centraliza o texto dentro daquele item */
+	width: 30%; /*Cada item terá 30% de largura da página toda */
+	vertical-align: top; /*carrega pela linha de cima e não embaixo, alinhando melhor com o navegador */
+	/*background: #CCCCCC; -> serviu para ajudar a configurar e entender o tamanho da caixa, depois tiramos */
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box; /*Adiciona os pixel do padding primeiro para depois fazer o width 30%, sem isso ele adiciona depois de colocar a porcentagem*/
+	border:2px solid #000000; /*Tamanho, tipo e cor*/
+	border-radius: 10px; /*Arredonda a borda*/
+}
+
+.produtos li:hover { /*adiciona e/ou altera estilos do LI aos produtos ao passar com o mouse por cima*/
+	border-color: #C78C19;
+	/* font-size:40px; NÃO FUNCIONA, pois o tamanho da fonte está dentro do h2 dentro do li, adicionar no LI não altera o h2, precisamos ser mais especifico nesse caso*/
+
+}
+
+.produtos li:active { /*Quando clicamos nos objetivos dos produtos li */
+	border-color: #088C19; /*verde*/
+
+}
+
+.produtos li:hover h2 { /*Dentro do li, temos o h2 que tem seu tamanho escolhido, então alteramos lá dentro de onde está essa configuração*/
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg"); /*replica a imagem até usar 100% do tamanho, bg é uma imagem pequena e fica preenchido mesmo assim;*/
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size:13px;
+	margin-top:20px;
+}
+
+main {
+
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {/*Virgula para selecionar mais de uma tag para ter a mesma configuração*/
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px 0;
+}
+
+.input-padrao { 
+	display: block; /*Lembrando que block significa que ocupa a largura toda da pagina a direita do objeto;*/
+	margin: 0 0 10px 0;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width:40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all; /*Leva um segundo para mudar tudo*/
+	/*transition: 1s background; -> aqui seria só o background*/
+	cursor: pointer; /*Muda o cursor do mouse para maozinha de clicar*/
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2); /*Aumenta a escala/objeto em 20% (1+0.2)*/
+	/* transform: rotate (70) scale(1.2) ->rodará e aumentará, só pra rir mesmo*/
+}
+
+table {
+	margin: 20px 0 40px;
+	
+}
+
+thead{
+	background: #555555;
+	color: white;
+	font-weight: bold;
+	
+	
+
+}
+
+td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item da table, para uma tabela grande, fu */
+	border: 1px solid #000000;
+	padding: 8px 15px;
+	
+}
+
+/* CSS da página inicial */
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em; /*Agora em é o tamanho da fonte dela, logo 1em significa 2em do padrão principal*/
+	clear: left; /*Limpa o float usado antes, dando uma barreira para o que vier disso não subir também*/
+	/*color:rgba(0,0,0,0.3); RGB alfa, o ultimo define o grau de opacidade que vai de 0 a 1*/
+}
+
+/* 
+.titulo-principal:first-letter { -> Abre possibilidade de alterar a 1° letra do titulo
+	font-weight: bold;
+}
+
+.titulo-principal:before { -> adiciona um espaço antes do elemento para o css agir;
+	content: "[ ";
+}
+.titulo-principal:after { -> adiciona um espaço depois do elemento para o css agir;
+	content: " ]";
+}
+*/
+
+.principal {
+	padding: 3em 0; /*mesmo padding dos outros elementos*/
+	background: #FEFEFE; /*quase branco, menos gritando aos olhos*/
+
+	width: 940px;
+	margin: 0 auto;
+}
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em { /*esse em é de italico*/
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE,#888888); /*faz o gradiente da cor de fundo do branco para o cinza*/
+
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888; /*cinza bem escuro*/
+
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width:40%;
+	display: inline-block;
+	vertical-align: top;  /*Alinha pelo topo e não pela base que e´o padrão*/
+}
+
+.itens {
+	line-height: 1.5; /*espaçamento, altura da caixa de texto, queremos que seja ela inteira + meio*/
+
+}
+
+.itens:first-child { /*Edita o 1° item da lista*/
+	font-weight: bold;
+}
+
+.itens:before { /*Abre um espaço ANTES do item para o CSS agir*/
+	content: "🟊"; /* content é inserir, pelo unicode achamos a estrela e adicionamos uma estrela antes dos itens da lsita */
+}
+
+
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1; /*O quanto queremos ver do elemento, opacidade*/
+	transition: 400ms; /*Leva 400ms para aplicar as propriedades daqui*/
+	box-shadow: 10px 10px 10px #000000; /*adiciona uma sombra na imagem (X,Y,espalhar, intensidade,cor)*/
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
+
+}
+
+
+.video {
+	width: 560px; /*Padrão que veio do video, não foi alterado*/
+	margin: 2em auto; /*O automatico para os lados faz ele centralizar na página*/
+
+}
+
+/*ideal é abrir a ferramenta do desenvolver, ir vendo lá o que está distorcido e ir alterando aqui apenas
+Não precisa reescrever todas as classes e tudo do zero*/
+@media screen and (max-width: 480px) {
+	.caixa,.principal,.conteudo-beneficios,.mapa-conteudo,.video {
+		width: auto; /*antes era 940px ou 600 e pouco para outros;*/
+	}
+
+	h1 { /*é nossa imagem de logo*/
+		text-align: center; /*Ficará no centro da tela do celular*/
+	}
+
+	nav {
+		position: static; /*era absoluto*/
+	}
+
+	.lista-beneficios,.imagem-beneficios {
+		width:100%; /*para imagem ficar abaixo da lista*/
+	}
+}
