@@ -2,7 +2,6 @@ body {
 	font-family: 'Montserrat', sans-serif; /*Todo texto daqui pra baixo terá essa fonte importada do google*/
 } /*Alternativa do Montserrat' é a padrão, sans-serif */
 
-
 header {
 	background: #BBBBBB;
 	padding: 20px 0; /* objetivo aqui é que nada do cabeçalho chegue na margem e por isso fazemos uma margem interna cima e baixo*/
@@ -12,7 +11,6 @@ header {
 	position: relative;
 	width: 940px; /*Largura padrão da web pois geralmente temos 1260px de largura e 940 tá numa boa margem */
 	margin: 0 auto; /* pra cima e pra baixo e no segundo pra esquerda e direita; */ 
-
 }
 
 nav {
@@ -39,8 +37,6 @@ nav a:hover { /*"hover" edita o que acontece ao passar o mouse por cima do link*
 	text-decoration: underline;
 }
 
-
-
 .produtos {
 	width: 940px;
 	margin: 0 auto;
@@ -63,12 +59,10 @@ nav a:hover { /*"hover" edita o que acontece ao passar o mouse por cima do link*
 .produtos li:hover { /*adiciona e/ou altera estilos do LI aos produtos ao passar com o mouse por cima*/
 	border-color: #C78C19;
 	/* font-size:40px; NÃO FUNCIONA, pois o tamanho da fonte está dentro do h2 dentro do li, adicionar no LI não altera o h2, precisamos ser mais especifico nesse caso*/
-
 }
 
 .produtos li:active { /*Quando clicamos nos objetivos dos produtos li */
 	border-color: #088C19; /*verde*/
-
 }
 
 .produtos li:hover h2 { /*Dentro do li, temos o h2 que tem seu tamanho escolhido, então alteramos lá dentro de onde está essa configuração*/
@@ -78,7 +72,6 @@ nav a:hover { /*"hover" edita o que acontece ao passar o mouse por cima do link*
 .produtos h2 {
 	font-size: 30px;
 	font-weight: bold;
-
 }
 
 .produto-descricao {
@@ -93,7 +86,7 @@ nav a:hover { /*"hover" edita o que acontece ao passar o mouse por cima do link*
 
 footer {
 	text-align: center;
-	background: url("bg.jpg"); /*replica a imagem até usar 100% do tamanho, bg é uma imagem pequena e fica preenchido mesmo assim;*/
+	background: url("../img/bg.jpg"); /*replica a imagem até usar 100% do tamanho, bg é uma imagem pequena e fica preenchido mesmo assim;*/
 	padding: 40px 0;
 }
 
@@ -108,7 +101,7 @@ main {
 }
 
 form {
-	margin: 40px 0;
+	margin: 40px 10px;
 }
 
 form label, form legend {/*Virgula para selecionar mais de uma tag para ter a mesma configuração*/
@@ -149,23 +142,18 @@ form label, form legend {/*Virgula para selecionar mais de uma tag para ter a me
 }
 
 table {
-	margin: 20px 0 40px;
-	
+	margin: 20px 0 40px 10px;	
 }
 
 thead{
 	background: #555555;
 	color: white;
 	font-weight: bold;
-	
-	
-
 }
 
 td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item da table, para uma tabela grande, fu */
 	border: 1px solid #000000;
 	padding: 8px 15px;
-	
 }
 
 /* CSS da página inicial */
@@ -197,10 +185,10 @@ td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item
 .principal {
 	padding: 3em 0; /*mesmo padding dos outros elementos*/
 	background: #FEFEFE; /*quase branco, menos gritando aos olhos*/
-
 	width: 940px;
 	margin: 0 auto;
 }
+
 .principal p {
 	margin: 0 0 1em;
 }
@@ -233,13 +221,11 @@ td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item
 .mapa p {
 	margin: 0 0 2em;
 	text-align: center;
-
 }
 
 .beneficios {
 	padding: 3em 0;
 	background: #888888; /*cinza bem escuro*/
-
 }
 
 .conteudo-beneficios {
@@ -255,7 +241,6 @@ td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item
 
 .itens {
 	line-height: 1.5; /*espaçamento, altura da caixa de texto, queremos que seja ela inteira + meio*/
-
 }
 
 .itens:first-child { /*Edita o 1° item da lista*/
@@ -266,8 +251,6 @@ td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item
 	content: "🟊"; /* content é inserir, pelo unicode achamos a estrela e adicionamos uma estrela antes dos itens da lsita */
 }
 
-
-
 .imagem-beneficios {
 	width: 60%;
 	opacity: 1; /*O quanto queremos ver do elemento, opacidade*/
@@ -277,14 +260,11 @@ td, th { /*Não usamos classe aqui pq teriamos que colocar classe para cada item
 
 .imagem-beneficios:hover {
 	opacity: 0.3;
-
 }
-
 
 .video {
 	width: 560px; /*Padrão que veio do video, não foi alterado*/
 	margin: 2em auto; /*O automatico para os lados faz ele centralizar na página*/
-
 }
 
 /*ideal é abrir a ferramenta do desenvolver, ir vendo lá o que está distorcido e ir alterando aqui apenas
